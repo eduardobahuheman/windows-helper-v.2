@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pergunta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Diagnóstico de Computadores</h1>
+    </header>
+    <main>
+        <h2>{{ question['text'] }}</h2>
+        <a href="{{ url_for('question', id=question['yes']) }}" class="button">Sim</a>
+        <a href="{{ url_for('question', id=question['no']) }}" class="button">Não</a>
+    </main>
+</body>
+</html>
